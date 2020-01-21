@@ -25,14 +25,14 @@ def county():
 
 	with open('counties.json', 'r', encoding = "ISO-8859-1") as f:
 		data = json.load(f)
-		type = data['type']
-		features = data['features']
+		# type = data['type']
+		# features = data['features']
 		# value = data['features']
-		print(len(data))
-		print(len(features))
+		# print(len(data))
+		# print(len(features))
 		# print(data)
-		return data, type, features
-	return data, type, features
+		return data
+	return data
 
 
 # ob = MyClass()
@@ -65,17 +65,25 @@ def map():
     # """List all available api routes."""
     # return render_template('map.html', title='MapVisualization')
     # data = json.load(file)
-    data = county()
-    type = data[0]
-    print(type(data))
+    # data = county()
+    # type = data[0]
+    # print(type(data))
     # return render_template('map.html', data=data, type=type, features=features)
-    return render_template('map.html', data=data, type=type)
+    return render_template('map.html')
 
 @app.route("/presentation")
 def presentation():
     # """List all available api routes."""
     return render_template('presentation.html', title='Presentation')
 
+
+@app.route("/counties_data")
+def counties_data():
+	# county()
+	print('endpoint HIT~~~~~~~')
+	# data = county()
+	county()
+	return jsonify(data)
 
 if __name__ == '__main__':
 	app.run(debug=True)
