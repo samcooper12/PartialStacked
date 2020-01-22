@@ -1,0 +1,57 @@
+
+.chart::before {
+  position: absolute;
+  top: 50px;
+  left: 300px;
+  z-index: -1;
+  display: block;
+  width: 400px;
+  height: 300px;
+  content: " ";
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.tooltip {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  padding: 8px;
+  padding-top: 8px;
+  font: 10px verdana;
+  font-weight: lighter;
+  color: white;
+  text-align: center;
+  background: black;
+  border: 0;
+  border-radius: 10px;
+}
+
+.axis-text {
+  font-family: verdana;
+  font-weight: bold;
+  fill: rgb(59, 56, 56);
+  text-anchor: middle;
+}
+
+.active {
+  font-weight: bold;
+  fill: #000;
+  fill: rgb(17, 17, 82);
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive {
+  font-weight: lighter;
+  fill: gray;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive:hover {
+  fill: #4e1224;
+  cursor: pointer;
+}
