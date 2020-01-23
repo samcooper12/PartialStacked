@@ -1,6 +1,13 @@
+.title {
+  font: 20px verdana;
+  font-weight: bold;
+  fill: rgb(94, 73, 73);
+  text-anchor: middle;
 
+}
 .chart::before {
   position: absolute;
+  font-family: 10px verdana;
   top: 50px;
   left: 300px;
   z-index: -1;
@@ -29,8 +36,31 @@
   border-radius: 10px;
 }
 
+
+text.axis-text{
+  font: 20px verdana;
+  font-weight: bold;
+  fill: rgb(94, 73, 73);
+  text-anchor: middle;
+}
+
+text.active
+{
+  font: 20px verdana;
+  font-weight: bold;
+  fill: rgb(59, 56, 56);
+  text-anchor: middle;
+}
+
+text.inactive
+{
+  font: 20px verdana;
+  fill: rgb(138, 128, 128);
+  text-anchor: middle;
+}
+
 .axis-text {
-  font-family: verdana;
+  font: 20px verdana;
   font-weight: bold;
   fill: rgb(59, 56, 56);
   text-anchor: middle;
@@ -38,6 +68,7 @@
 
 .active {
   font-weight: bold;
+  font: 20px verdana;
   fill: #000;
   fill: rgb(17, 17, 82);
   transition: fill 0.3s ease-out;
@@ -46,6 +77,7 @@
 
 .inactive {
   font-weight: lighter;
+  font: 10px verdana;
   fill: gray;
   transition: fill 0.3s ease-out;
   text-anchor: middle;
